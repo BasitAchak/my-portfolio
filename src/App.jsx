@@ -35,15 +35,15 @@ function App() {
 
       <main>
         <section id="home" className="hero">
-          <p className="eyebrow">FULL STACK DEVELOPER · MOBILE · WEB · AI</p>
+          <p className="eyebrow">FULL-STACK & AI DEVELOPER</p>
           <h1>Abdul Basit</h1>
-          <h2>I build practical software and AI-powered applications.</h2>
+          <h2>I build web, mobile, and AI-powered applications.</h2>
           <p className="hero-text">
-            Computer Science student at NUST focused on production-ready mobile and full-stack applications, with experience in React Native, Firebase, and AI API integrations.
+            I turn ideas into working software using React, React Native, APIs, databases, and AI integrations. Explore my deployed projects and see what I build.
           </p>
           <div className="actions">
-            <a className="button primary" href="#projects">View Projects</a>
-            <a className="button secondary" href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
+            <a className="button primary" href="#projects">Explore My Work</a>
+            <a className="button secondary" href="#contact">Contact Me</a>
           </div>
         </section>
 
@@ -60,7 +60,7 @@ function App() {
 
         <section id="projects" className="section">
           <p className="eyebrow">PROJECTS</p>
-          <h2>Things I have been building.</h2>
+          <h2>Deployed projects and experiments.</h2>
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
