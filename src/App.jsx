@@ -83,16 +83,56 @@ function App() {
         </section>
 
         <section id="contact" className="section contact">
-          <p className="eyebrow">CONNECT</p>
-          <h2>Let&apos;s connect.</h2>
-          <p className="section-text">Find me through my professional profiles, download my CV, or book a conversation.</p>
-          <div className="links">
-            <a href="https://github.com/BasitAchak" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/abdul-basit-khan-47bbb7376" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="/Resume_AbdulBasit.pdf" target="_blank" rel="noreferrer">CV</a>
-            <a href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noreferrer">Book a Call</a>
-          </div>
-        </section>
+  <p className="eyebrow">CONNECT</p>
+  <h2>Let&apos;s connect.</h2>
+  <p className="section-text">
+    Have a project idea, opportunity, or question? Send me a message.
+  </p>
+
+  <form
+    className="contact-form"
+    action="https://formspree.io/f/myeznrer"
+    method="POST"
+  >
+    <label htmlFor="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="Your name"
+      required
+    />
+
+    <label htmlFor="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="your@email.com"
+      required
+    />
+
+    <label htmlFor="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="Tell me about your project or opportunity..."
+      required
+    />
+
+    <button className="button primary" type="submit">
+      Send Message
+    </button>
+  </form>
+
+  <div className="links">
+    <a href="https://github.com/BasitAchak" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/abdul-basit-khan-47bbb7376" target="_blank" rel="noreferrer">LinkedIn</a>
+    <a href="/Resume_AbdulBasit.pdf" target="_blank" rel="noreferrer">CV</a>
+    <a href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noreferrer">Book a Call</a>
+  </div>
+</section>
       </main>
 
       <footer>© {new Date().getFullYear()} Abdul Basit · Built with React.</footer>

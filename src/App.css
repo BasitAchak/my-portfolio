@@ -37,3 +37,41 @@ a { color:inherit; }
 footer { width:min(1100px,calc(100% - 40px)); margin:auto; padding:30px 0 50px; color:var(--muted); font-size:13px; }
 @media(max-width:800px){ .project-grid{grid-template-columns:1fr;} .section{padding:80px 0;} }
 @media(max-width:500px){ .navbar,.hero,.section,footer{width:calc(100% - 28px);} .navbar nav{gap:15px;} .actions,.links{flex-direction:column;} .button,.links a{text-align:center;} }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 650px;
+  margin-top: 2rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  border: 0;
+  cursor: pointer;
+}
