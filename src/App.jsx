@@ -5,19 +5,19 @@ const projects = [
     title: 'RepoMind AI',
     description: 'AI-powered code reviewer that analyzes pasted code or GitHub repositories and provides structured feedback across bugs, security issues, code quality, and improvements.',
     tech: 'React · TypeScript · Node.js · Express · Groq AI',
-    link: 'https://github.com/BasitAchak',
+    link: 'https://github.com/BasitAchak/repomind-ai',
   },
   {
     title: 'Local Deals Pro',
     description: 'Full-stack mobile app for real-time local deals with adjustable-radius filtering, flash deals, QR redemption, merchant tools, and Firebase services.',
     tech: 'React Native · Expo · TypeScript · Firebase · Zustand',
-    link: 'https://github.com/BasitAchak',
+    link: 'https://github.com/BasitAchak/local-deals-pro',
   },
   {
     title: 'Border AI Trade Assistant',
     description: 'Cross-platform mobile assistant for traders at Chaman Border with document analysis, HS Code lookup, customs guidance, OCR scanning, and offline document support.',
     tech: 'React Native · Expo · TypeScript · Firebase · Node.js · Groq AI',
-    link: 'https://github.com/BasitAchak',
+    link: 'https://github.com/BasitAchak/Border-AI-Trade-Assistant',
   },
 ]
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="site">
       <header className="navbar">
-        <a className="logo" href="#home">AB</a>
+        <a className="logo" href="#home" aria-label="Abdul Basit home">AB</a>
         <nav>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -43,7 +43,7 @@ function App() {
           </p>
           <div className="actions">
             <a className="button primary" href="#projects">View Projects</a>
-            <a className="button secondary" href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noreferrer">Book a Call</a>
+            <a className="button secondary" href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
           </div>
         </section>
 
@@ -67,7 +67,7 @@ function App() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <small>{project.tech}</small>
-                <a className="project-link" href={project.link} target="_blank" rel="noreferrer">View on GitHub ↗</a>
+                <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
               </article>
             ))}
           </div>
@@ -127,10 +127,10 @@ function App() {
   </form>
 
   <div className="links">
-    <a href="https://github.com/BasitAchak" target="_blank" rel="noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/abdul-basit-khan-47bbb7376" target="_blank" rel="noreferrer">LinkedIn</a>
-    <a href="/Resume_AbdulBasit.pdf" target="_blank" rel="noreferrer">CV</a>
-    <a href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noreferrer">Book a Call</a>
+    <a href="https://github.com/BasitAchak" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/abdul-basit-khan-47bbb7376" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="/Resume_AbdulBasit.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    <a href="https://calendly.com/basitlateef52/30min" target="_blank" rel="noopener noreferrer">Book a Call</a>
   </div>
 </section>
       </main>

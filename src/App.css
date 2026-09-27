@@ -5,9 +5,9 @@ body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,ui-s
 a { color:inherit; }
 .site { min-height:100vh; }
 .navbar { width:min(1100px,calc(100% - 40px)); height:80px; margin:auto; display:flex; align-items:center; justify-content:space-between; }
-.logo { width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--border); border-radius:12px; text-decoration:none; font-weight:800; }
+.logo { width:44px; height:44px; display:grid; place-items:center; border:1px solid var(--border); border-radius:12px; text-decoration:none; font-weight:800; }
 .navbar nav { display:flex; gap:28px; }
-.navbar nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+.navbar nav a { min-height:44px; display:inline-flex; align-items:center; color:var(--muted); text-decoration:none; font-size:14px; }
 .navbar nav a:hover { color:var(--text); }
 .hero { width:min(1100px,calc(100% - 40px)); min-height:650px; margin:auto; padding:80px 0; display:flex; flex-direction:column; justify-content:center; }
 .eyebrow { margin:0 0 20px; color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.16em; }
@@ -15,7 +15,7 @@ a { color:inherit; }
 .hero h2 { max-width:720px; margin:28px 0 20px; font-size:clamp(28px,4vw,48px); line-height:1.1; letter-spacing:-.035em; }
 .hero-text,.section-text { max-width:700px; color:var(--muted); font-size:18px; line-height:1.7; }
 .actions { display:flex; gap:12px; margin-top:30px; }
-.button { padding:13px 20px; border-radius:9px; text-decoration:none; font-weight:700; font-size:14px; }
+.button { min-height:44px; display:inline-flex; align-items:center; justify-content:center; padding:10px 20px; border-radius:9px; text-decoration:none; font-weight:700; font-size:14px; }
 .primary { background:var(--text); color:var(--bg); }
 .secondary { border:1px solid var(--border); }
 .section { width:min(1100px,calc(100% - 40px)); margin:auto; padding:110px 0; border-top:1px solid var(--border); }
@@ -27,12 +27,12 @@ a { color:inherit; }
 .project-card h3 { margin:0 0 15px; font-size:22px; }
 .project-card p { color:var(--muted); line-height:1.6; margin:0 0 20px; }
 .project-card small { color:var(--muted); line-height:1.5; }
-.project-link { margin-top:auto; padding-top:22px; text-decoration:none; font-weight:700; font-size:14px; }
+.project-link { min-height:44px; display:inline-flex; align-items:center; margin-top:auto; padding-top:0; text-decoration:none; font-weight:700; font-size:14px; }
 .future,.contact { text-align:center; }
 .future .section-text,.contact .section-text { margin-left:auto; margin-right:auto; }
 .badge-placeholder { max-width:600px; margin:30px auto 0; padding:25px; border:1px dashed var(--border); border-radius:14px; color:var(--muted); }
 .links { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px; }
-.links a { padding:12px 20px; border:1px solid var(--border); border-radius:9px; text-decoration:none; background:var(--surface); }
+.links a { min-height:44px; display:inline-flex; align-items:center; justify-content:center; padding:10px 20px; border:1px solid var(--border); border-radius:9px; text-decoration:none; background:var(--surface); }
 .links a:hover { background:var(--surface2); }
 footer { width:min(1100px,calc(100% - 40px)); margin:auto; padding:30px 0 50px; color:var(--muted); font-size:13px; }
 @media(max-width:800px){ .project-grid{grid-template-columns:1fr;} .section{padding:80px 0;} }
@@ -70,8 +70,24 @@ footer { width:min(1100px,calc(100% - 40px)); margin:auto; padding:30px 0 50px; 
 }
 
 .contact-form button {
+  min-height: 44px;
   align-self: flex-start;
   margin-top: 0.5rem;
   border: 0;
   cursor: pointer;
+}
+
+/* Keyboard-friendly focus states for interactive elements. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+@media (max-width: 500px) {
+  .contact-form button {
+    width: 100%;
+  }
 }
